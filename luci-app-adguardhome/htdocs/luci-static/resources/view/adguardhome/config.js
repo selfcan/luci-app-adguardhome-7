@@ -123,13 +123,14 @@ return view.extend({
 		statusOpt.rawhtml = true;
 		statusOpt.cfgvalue = () => getStatusValue(isRunning);
 
-		const webInterfaceOpt = statusSect.option(form.Button, '_webiface', _('Launch Web Interface'));
-		webInterfaceOpt.inputstyle = 'apply';
-		webInterfaceOpt.inputtitle = 'Open AdGuard Home';
-		webInterfaceOpt.onclick = function() {
-			window.open('http://' + window.location.hostname + ':3000', '_blank');
-		};
-		webInterfaceOpt.depends('enabled', '1');
+		if (isRunning) {
+			const webInterfaceOpt = statusSect.option(form.Button, '_webiface', _('Launch Web Interface'));
+			webInterfaceOpt.inputstyle = 'apply';
+			webInterfaceOpt.inputtitle = 'Open AdGuard Home';
+			webInterfaceOpt.onclick = function() {
+				window.open('http://' + window.location.hostname + ':3000', '_blank');
+			};
+		}
 
 		const mainSect = map.section(form.TypedSection, 'adguardhome');
 		mainSect.anonymous = true;
