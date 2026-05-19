@@ -50,7 +50,7 @@ jobs:
           - openwrt-25.12
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@main
         with:
           fetch-depth: 0
 
@@ -83,7 +83,7 @@ jobs:
 
       - name: Upload packages
         if: ${{ env.SKIP_BUILD == '0' }}
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@main
         with:
           name: ${{ github.ref_name }}
           token: ${{ secrets.GITHUB_TOKEN }}
