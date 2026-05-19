@@ -11,6 +11,6 @@ LUCI_DEPENDS:=+adguardhome +luci-base
 LUCI_EXTRA_DEPENDS:=adguardhome (>=0.107.73-r3)
 LUCI_PKGARCH:=all
 
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
