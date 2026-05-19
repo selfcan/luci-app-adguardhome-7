@@ -129,6 +129,7 @@ return view.extend({
 		webInterfaceOpt.onclick = function() {
 			window.open('http://' + window.location.hostname + ':3000', '_blank');
 		};
+		webInterfaceOpt.depends('enabled', '1');
 
 		const mainSect = map.section(form.TypedSection, 'adguardhome');
 		mainSect.anonymous = true;
@@ -145,6 +146,16 @@ return view.extend({
 			_('Go environment variables that tune garbage collector and memory management.') +
 				' ' + _('Modify at your own risk.'),
 		);
+
+		const enabledOpt = mainSect.taboption(
+			'general',
+			form.Flag,
+			'enabled',
+			_('Enable Service'),
+			_('Start AdGuard Home.'),
+		);
+		enabledOpt.default = '0';
+		enabledOpt.rmempty = false;
 
 		const configFileOpt = mainSect.taboption(
 			'general',
@@ -198,16 +209,6 @@ return view.extend({
 			_('Verbose logging'),
 		);
 		verboseOpt.default = '0';
-
-		const enabledOpt = mainSect.taboption(
-			'general',
-			form.Flag,
-			'enabled',
-			_('Enable Service'),
-			_('Start AdGuard Home.'),
-		);
-		enabledOpt.default = '0';
-		enabledOpt.rmempty = false;
 
 		const advSettingsOpt = mainSect.taboption(
 			'general',
