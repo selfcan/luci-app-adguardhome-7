@@ -155,8 +155,8 @@ msgid "Version"
 msgstr "バージョン"
 
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:203
-msgid "When enabled, the AdGuard Home service will start automatically on boot."
-msgstr "有効にすると、AdGuard Home サービスは起動時に自動的に開始されます。"
+msgid "Start AdGuard Home."
+msgstr "AdGuard Home を起動します。"
 
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:160
 msgid "Will be owned by the service user."

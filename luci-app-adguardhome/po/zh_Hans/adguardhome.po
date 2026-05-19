@@ -43,8 +43,8 @@ msgid "Enable Service"
 msgstr "启用服务"
 
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:201
-msgid "When enabled, the AdGuard Home service will start automatically on boot."
-msgstr "启用后，AdGuard Home 服务将在系统启动时自动运行。"
+msgid "Start AdGuard Home."
+msgstr "启动 AdGuard Home。"
 
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:132
 msgid "File System Access"
