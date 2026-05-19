@@ -73,6 +73,9 @@ define Package/adguardhome/install
 	$(INSTALL_DIR) $(1)/etc/capabilities
 	$(INSTALL_CONF) ./files/adguardhome.json $(1)/etc/capabilities/adguardhome.json
 
+	$(INSTALL_DIR) $(1)/etc/adguardhome
+	$(INSTALL_CONF) ./files/adguardhome.yaml $(1)/etc/adguardhome/adguardhome.yaml
+
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_CONF) ./files/adguardhome.conf $(1)/etc/config/adguardhome
 
