@@ -205,7 +205,7 @@ return view.extend({
 			form.Flag,
 			'enabled',
 			_('Enable Service'),
-			_('When disabled, the AdGuard Home service will not start automatically.'),
+			_('When enabled, the AdGuard Home service will start automatically on boot.'),
 		);
 		enabledOpt.default = '0';
 		enabledOpt.rmempty = false;

@@ -163,8 +163,8 @@ msgid "Version"
 msgstr "버전"
 
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:203
-msgid "When disabled, the AdGuard Home service will not start automatically."
-msgstr "비활성화되면 AdGuard Home 서비스가 자동으로 시작되지 않습니다."
+msgid "When enabled, the AdGuard Home service will start automatically on boot."
+msgstr "활성화하면 AdGuard Home 서비스가 부팅 시 자동으로 시작됩니다."
 
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:160
 msgid "Will be owned by the service user."
