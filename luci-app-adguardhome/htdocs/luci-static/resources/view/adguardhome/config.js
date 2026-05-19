@@ -11,6 +11,7 @@ const DEFAULT_CONFIG_FILE = '/etc/adguardhome/adguardhome.yaml';
 const DEFAULT_WORK_DIR = '/var/lib/adguardhome';
 const DEFAULT_USER = 'adguardhome';
 const DEFAULT_GROUP = DEFAULT_USER;
+const DEFAULT_WEB_PORT = '3000';
 
 const DEFAULT_GOGC = '0';
 const DEFAULT_GOMAXPROCS = '0';
@@ -65,6 +66,21 @@ async function getVersion() {
 	}
 }
 
+async function getWebPort() {
+	try {
+		const res = await fs.exec('/bin/grep', ['-m1', 'bind_port:', DEFAULT_CONFIG_FILE]);
+		if (res.stdout) {
+			const match = res.stdout.match(/bind_port:\s*['"]?(\d+)/);
+			if (match && match[1]) {
+				return match[1];
+			}
+		}
+	} catch (e) {
+		console.error(e);
+	}
+	return DEFAULT_WEB_PORT;
+}
+
 function updateStatus(node) {
 	const output = node?.querySelector('output');
 	return output
@@ -106,10 +122,11 @@ return view.extend({
 		return Promise.all([
 			getStatus(),
 			getVersion(),
+			getWebPort(),
 		]);
 	},
 
-	async render([isRunning, version]) {
+	async render([isRunning, version, webPort]) {
 		const map = new form.Map('adguardhome', _('AdGuard Home'));
 
 		const statusSect = map.section(form.TypedSection, 'status');
@@ -128,7 +145,7 @@ return view.extend({
 			webInterfaceOpt.inputstyle = 'apply';
 			webInterfaceOpt.inputtitle = 'Open AdGuard Home';
 			webInterfaceOpt.onclick = function() {
-				window.open('http://' + window.location.hostname + ':3000', '_blank');
+				window.open('http://' + window.location.hostname + ':' + webPort, '_blank');
 			};
 		}
 
