@@ -154,6 +154,7 @@ luci-app-adguardhome/
 ### Maintainer
 
 - George Sapkin <george@sapk.in>
+- MomoFlora <2519840456@qq.com>
 
 ## 🔗 Related Links
 

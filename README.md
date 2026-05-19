@@ -154,6 +154,7 @@ luci-app-adguardhome/
 ### 维护者
 
 - George Sapkin <george@sapk.in>
+- MomoFlora <2519840456@qq.com>
 
 ## 🔗 相关链接
 
