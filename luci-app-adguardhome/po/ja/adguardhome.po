@@ -112,6 +112,10 @@ msgstr "読み書きアクセス"
 msgid "Running"
 msgstr "実行中"
 
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:266
+msgid "Launch Web Interface"
+msgstr "Web インターフェイスを起動"
+
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:122
 msgid "Service Status"
 msgstr "サービスステータス"

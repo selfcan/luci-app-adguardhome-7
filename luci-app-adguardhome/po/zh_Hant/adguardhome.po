@@ -116,6 +116,10 @@ msgstr "讀寫存取"
 msgid "Running"
 msgstr "執行中"
 
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:266
+msgid "Launch Web Interface"
+msgstr "啟動 Web 介面"
+
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:122
 msgid "Service Status"
 msgstr "服務狀態"

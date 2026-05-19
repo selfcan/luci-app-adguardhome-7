@@ -30,7 +30,7 @@ start_service() {
 	local gc maxprocs memlimit enabled
 
 	uci_validate_section 'adguardhome' 'adguardhome' "$config_name" \
-		'enabled:bool:1' \
+		'enabled:bool:0' \
 		'gc:uinteger:0' \
 		'group:string:adguardhome' \
 		'config:string' \

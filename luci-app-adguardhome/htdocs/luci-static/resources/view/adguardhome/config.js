@@ -124,6 +124,13 @@ return view.extend({
 		statusOpt.rawhtml = true;
 		statusOpt.cfgvalue = () => getStatusValue(isRunning);
 
+		const webInterfaceOpt = statusSect.option(form.Button, '_webiface', _('Launch Web Interface'));
+		webInterfaceOpt.inputstyle = 'apply';
+		webInterfaceOpt.inputtitle = 'Open AdGuard Home';
+		webInterfaceOpt.onclick = function() {
+			window.open('http://' + window.location.hostname + ':3000', '_blank');
+		};
+
 		const mainSect = map.section(form.TypedSection, 'adguardhome');
 		mainSect.anonymous = true;
 
@@ -200,7 +207,7 @@ return view.extend({
 			_('Enable Service'),
 			_('When disabled, the AdGuard Home service will not start automatically.'),
 		);
-		enabledOpt.default = '1';
+		enabledOpt.default = '0';
 		enabledOpt.rmempty = false;
 
 		const advSettingsOpt = mainSect.taboption(

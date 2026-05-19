@@ -116,6 +116,10 @@ msgstr "读写访问"
 msgid "Running"
 msgstr "运行中"
 
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:266
+msgid "Launch Web Interface"
+msgstr "启动 Web 界面"
+
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:122
 msgid "Service Status"
 msgstr "服务状态"
