@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-20 09:23+0800\n"
+"PO-Revision-Date: 2026-05-19 14:09+0800\n"
+"Last-Translator: eternalwrt-bot <zj18139624826@gmail.com>\n"
+"Language-Team: Chinese\n"
 "Language: zh_Hans\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: MonkeyCode-AI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:244
 msgid ""
