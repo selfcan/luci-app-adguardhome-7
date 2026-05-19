@@ -6,7 +6,6 @@
 'require poll';
 'require rpc';
 'require view';
-'require L';
 
 const DEFAULT_CONFIG_FILE = '/etc/adguardhome/adguardhome.yaml';
 const DEFAULT_WORK_DIR = '/var/lib/adguardhome';
