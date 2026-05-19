@@ -27,9 +27,10 @@ start_service() {
 
 	local config_name='config'
 	local config_file config group user verbose work_dir workdir
-	local gc maxprocs memlimit
+	local gc maxprocs memlimit enabled
 
 	uci_validate_section 'adguardhome' 'adguardhome' "$config_name" \
+		'enabled:bool:1' \
 		'gc:uinteger:0' \
 		'group:string:adguardhome' \
 		'config:string' \
@@ -42,6 +43,12 @@ start_service() {
 		'verbose:bool:0' \
 		'workdir:string' \
 		'work_dir:string:/var/lib/adguardhome'
+
+	# Check if service is enabled
+	if [ "$enabled" = "0" ]; then
+		echo 'AdGuard Home is disabled in configuration' >&2
+		return 1
+	fi
 
 	# Compatibility with older configs
 	[ -n "$config" ] && config_file="$config"

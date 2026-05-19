@@ -6,6 +6,7 @@
 'require poll';
 'require rpc';
 'require view';
+'require L';
 
 const DEFAULT_CONFIG_FILE = '/etc/adguardhome/adguardhome.yaml';
 const DEFAULT_WORK_DIR = '/var/lib/adguardhome';
@@ -191,6 +192,16 @@ return view.extend({
 			_('Verbose logging'),
 		);
 		verboseOpt.default = '0';
+
+		const enabledOpt = mainSect.taboption(
+			'general',
+			form.Flag,
+			'enabled',
+			_('Enable Service'),
+			_('When disabled, the AdGuard Home service will not start automatically.'),
+		);
+		enabledOpt.default = '1';
+		enabledOpt.rmempty = false;
 
 		const advSettingsOpt = mainSect.taboption(
 			'general',
