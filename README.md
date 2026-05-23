@@ -1,5 +1,7 @@
 # luci-app-adguardhome
 
+![adguardhome](./images/adguardhome.png)
+
 > [!CAUTION]
 > **安全与使用须知 🔒**
 > * **保护您的凭据：** **切勿**将您的配置文件或敏感信息提交到公共仓库或公开分享。
@@ -7,8 +9,6 @@
 > * **系统要求：** 本插件需要 `adguardhome` 二进制文件作为依赖，请确保已正确安装。
 
 ## 📖 项目简介
-
-![adguardhome](./images/adguardhome.png)
 
 luci-app-adguardhome 是 OpenWRT 的 LuCI 界面插件，用于管理和配置 [AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)。AdGuard Home 是一个全网广告和跟踪器屏蔽 DNS 服务器，能够有效拦截广告、跟踪器和恶意域名。
 
