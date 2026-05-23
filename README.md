@@ -1,5 +1,7 @@
 # luci-app-adguardhome
 
+![adguardhome](./images/adguardhome.png)
+
 > [!CAUTION]
 > **安全与使用须知 🔒**
 > * **保护您的凭据：** **切勿**将您的配置文件或敏感信息提交到公共仓库或公开分享。
