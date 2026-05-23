@@ -1,5 +1,7 @@
 # luci-app-adguardhome
 
+![adguardhome](./images/adguardhome.png)
+
 > [!CAUTION]
 > **Security & Usage Notice 🔒**
 > * **PROTECT YOUR CREDENTIALS:** **Never** commit your configuration files or sensitive information to public repositories or share them openly. 
